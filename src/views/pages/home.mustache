@@ -1,0 +1,50 @@
+{{>partials/header}}
+
+
+
+<h2>Insira os dados do banco em uma tabela abaixo: </h2>
+
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+ 
+  table, th, td {
+    border: 1px solid black;
+  }
+ 
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nome:</th>
+            <th>Idade:</th>
+            <th>Email:</th>
+            <th>Endereço:</th>
+            <th>Bairro:</th>
+            <th>CEP:</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#users}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{age}}</td>
+                <td>{{email}}</td>
+                <td>{{endereco}}</td>
+                <td>{{bairro}}</td>
+                <td>{{CEP}}</td>
+            </tr>
+        {{/users}}
+    </tbody>
+</table>
+
+
+{{>partials/footer}}
